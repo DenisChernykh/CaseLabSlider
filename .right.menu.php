@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Машины", 
+		"#car", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Календарь", 
+		"#calendar", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"#footer", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
