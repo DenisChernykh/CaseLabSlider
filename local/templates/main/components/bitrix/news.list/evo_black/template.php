@@ -21,7 +21,7 @@ $this->setFrameMode(true);
     $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
     $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
     ?>
-      
+
     <div class="evo-black__inner">
         <div class="evo-black__info">
             <h3 class="evo-black__title">
@@ -42,11 +42,11 @@ $this->setFrameMode(true);
 
         <?php if (!empty($arItem['PROPERTIES']['ATT_CHAR']['VALUE'])): ?>
             <dl class="evo__descr-list">
-                <?php foreach ($arItem['PROPERTIES']['ATT_CHAR']['VALUE'] as $propValue): ?>
+                <?php foreach ($arItem['PROPERTIES']['ATT_CHAR']['VALUE'] as $keyValue => $propValue): ?>
 
                     <div>
-                        <dd><?= $propValue ?? ''; ?></dd>
-                        <dt><?= $arItem['PROPERTIES']['ATT_CHAR']['DESCRIPTION'] ?></dt>
+                        <dd><?= $propValue ?></dd>
+                        <dt><?= $arItem['PROPERTIES']['ATT_CHAR']['DESCRIPTION'][$keyValue] ?></dt>
 
 
                     </div>

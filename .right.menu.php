@@ -8,8 +8,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Календарь", 
-		"#calendar", 
+		"Новости", 
+		"#blog", 
 		Array(), 
 		Array(), 
 		"" 

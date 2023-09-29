@@ -45,32 +45,27 @@ use Bitrix\Main\Page\Asset;
 
 <header class="header">
     <div class="big-container">
-        <nav class="nav">
-            <?$APPLICATION->IncludeComponent("bitrix:menu", "menu_left", Array(
-	
-	),
-	false
-);?>
+        <button type="button" class="menu__icon icon-menu"><span></span></button>
 
+        <nav class="menu__body">
 
-            <a class="logo" href="#!">
-                <img class="logo-img" src="<?=SITE_TEMPLATE_PATH?>/assets/img/Logo.png" alt="logo">
-            </a>
-            <?$APPLICATION->IncludeComponent("bitrix:menu", "menu_right", Array(
-                "COMPONENT_TEMPLATE" => ".default",
-                "ROOT_MENU_TYPE" => "right",	// Тип меню для первого уровня
-                "MENU_CACHE_TYPE" => "N",	// Тип кеширования
-                "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-                "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-                "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-                "MAX_LEVEL" => "1",	// Уровень вложенности меню
-                "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-                "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-                "DELAY" => "N",	// Откладывать выполнение шаблона меню
-                "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-            ),
-                false
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "menu_top",
+                Array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "1",
+                    "MENU_CACHE_GET_VARS" => array(""),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "top",
+                    "USE_EXT" => "N"
+                )
             );?>
+
 
 
         </nav>

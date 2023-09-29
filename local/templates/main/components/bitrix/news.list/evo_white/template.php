@@ -22,7 +22,7 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
 
-        <div class="evo-white__inner">
+        <div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="evo-white__inner">
             <?php if (!empty($arItem['PROPERTIES']['ATT_TEXT']['VALUE'])): ?>
                 <?php foreach ($arItem['PROPERTIES']['ATT_TEXT']['VALUE'] as $keyValue => $propValue): ?>
                     <p class="evo-white__text">

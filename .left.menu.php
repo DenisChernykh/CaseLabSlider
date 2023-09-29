@@ -15,8 +15,15 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Новости", 
-		"#blog", 
+		"Трэк", 
+		"#track", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Опрос", 
+		"/survey", 
 		Array(), 
 		Array(), 
 		"" 

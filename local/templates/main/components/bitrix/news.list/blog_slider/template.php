@@ -19,13 +19,13 @@ $this->setFrameMode(true);
     </h3>
     <div class="blog__slider swiper">
         <div class="swiper-wrapper">
-            <? foreach ($arResult["ITEMS"] as $arItem): ?>
+            <?foreach($arResult["ITEMS"] as $arItem):?>
                 <?
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                 ?>
 
-                <div class="swiper-slide blog__item">
+                <div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="swiper-slide blog__item">
                     <?php if (!empty($arItem['PREVIEW_PICTURE']['SRC'])): ?>
                         <img class="blog__item-img" src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>">
                     <?php endif; ?>
